@@ -19,7 +19,7 @@ This project is a web application built using Flask that connects to a PostgreSQ
    ```
 3. Install the required dependencies:
    ```bash
-   uv add -r requirements.txt
+   pip install -r requirements.txt
    ```
 4. Configure the database connection in `.env` file:
    ```
