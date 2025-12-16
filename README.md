@@ -19,9 +19,17 @@ This project is a web application built using Flask that connects to a PostgreSQ
    ```
 3. Install the required dependencies:
    ```bash
-   pip install -r requirements.txt
+   uv add -r requirements.txt
    ```
-4. Configure the database connection in `.env` file:
+4. Install [Ollama](https://ollama.ai/) and pull the `llama3.2:latest` model:
+
+   ```bash
+   ollama pull llama3.2:latest
+   ```
+
+   > **Note:** If you want to use a different model, modify the model name in `Chatbot/llm/chatollama.py`
+
+5. Configure the database connection in `.env` file:
    ```
    DB_HOST=localhost
    DB_PORT=5432
@@ -29,18 +37,24 @@ This project is a web application built using Flask that connects to a PostgreSQ
    DB_USER=your_username
    DB_PASSWORD=your_password
    ```
-5. Run the Flask API application:
+6. (Optional) To reload the database with fresh data, use the scripts in the `reload/` folder:
+
+   ```bash
+   python reload/reload_db.py --yes
+   ```
+
+   This will drop existing tables and reload them with data from CSV files in `reload/data/`.
+
+7. Run the Flask API application:
    ```bash
    python API/main.py
    ```
-6. To run the Chatbot application, navigate to the Chatbot directory and start the Flask app:
+8. To run the Chatbot application, navigate to the Chatbot directory and start the Flask app:
    ```bash
    streamlit run Chatbot/main.py
    ```
 
 ## Usage
-
-<!-- Talk about using streamlit's chatbot and the different tabs to view stats -->
 
 To use the Chatbot application, run the UI, open your web browser and navigate to `http://localhost:8501`. You will see the Chatbot interface where you can interact with the system. The application provides various tabs to view statistics and other relevant information about the database.
 
