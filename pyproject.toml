@@ -1,0 +1,28 @@
+[project]
+name = "rumad"
+version = "2.0.0"
+description = "LACY RUMAD 2.0 Backend System"
+requires-python = ">=3.13"
+dependencies = [
+    "Flask",
+    "flask-cors",
+    "psycopg2-binary",
+    "pandas",
+    "polars",
+    "python-dateutil",
+    "pytz",
+    "tzdata",
+    "gunicorn",
+    "python-dotenv",
+    "streamlit",
+    "requests",
+    "sentence-transformers",
+    "langchain-ollama",
+    "langchain-core",
+    "langchain-text-splitters",
+    "pypdf",
+    "bcrypt",
+]
+
+[tool.setuptools]
+packages = ["API", "API.config", "API.dao", "API.handlers", "Chatbot", "Chatbot.llm", "Chatbot.Navigation"]

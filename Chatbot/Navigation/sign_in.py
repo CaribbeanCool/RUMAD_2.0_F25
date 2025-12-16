@@ -1,9 +1,5 @@
-import sys
-import os
 import streamlit as st
 import re
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from API.dao.user import UserDAO
 

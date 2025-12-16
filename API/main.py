@@ -1,9 +1,3 @@
-import sys
-from pathlib import Path
-
-# Add project root to Python path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from flask import Flask, jsonify, redirect, request, Blueprint
 from flask_cors import CORS
 

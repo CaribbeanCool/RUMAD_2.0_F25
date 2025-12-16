@@ -1,18 +1,10 @@
-import sys
 import re
-
-# import os
 import time
-from pathlib import Path
+
 from sentence_transformers import SentenceTransformer
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-
-# Add project root to path FIRST
-project_root = Path(__file__).resolve().parent.parent.parent
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
 
 from API.dao.syllabus import SyllabusDAO
 from API.dao.classes import ClassDAO

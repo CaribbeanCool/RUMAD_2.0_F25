@@ -1,7 +1,6 @@
-import sys
 import re
 import os
-from pathlib import Path
+
 from pypdf import PdfReader
 from os import listdir
 
@@ -10,13 +9,6 @@ from langchain_text_splitters import (
     SentenceTransformersTokenTextSplitter,
 )
 from sentence_transformers import SentenceTransformer
-
-# Add project root to path FIRST
-project_root = Path(__file__).resolve().parent.parent.parent
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
-
-
 from API.dao.syllabus import SyllabusDAO
 from API.dao.classes import ClassDAO
 
