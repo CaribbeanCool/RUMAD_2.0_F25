@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "9d39ef92-3c8a-4c4e-b54d-c80d95b8596a",
+		"name": "RUMAD 2.0 Fall25 APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47484585",
+		"_collection_link": "https://caribbeancool-765883.postman.co/workspace/RUMAD-2.0-Fall2025~4146054d-802f-4a27-be55-9d4161d16f1b/collection/47484585-9d39ef92-3c8a-4c4e-b54d-c80d95b8596a?action=share&source=collection_link&creator=47484585"
+	},
+	"item": [
+		{
+			"name": "classes",
+			"item": [
+				{
+					"name": "GET all classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{classes}}",
+							"host": [
+								"{{classes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET class by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{classes}}/9",
+							"host": [
+								"{{classes}}"
+							],
+							"path": [
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cname\": \"INSO\",\r\n    \"ccode\": \"4050\",\r\n    \"cdesc\": \"Water Management for AI services\",\r\n    \"term\": \"First Semester\",\r\n    \"years\": \"Every Year\",\r\n    \"cred\": 0,\r\n    \"csyllabus\": \"path/to/syllabus.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{classes}}",
+							"host": [
+								"{{classes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Invalid Class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cname\": \"CIIC\",\r\n    \"ccode\": \"4020\",\r\n    \"cdesc\": \"Basic English.\",\r\n    \"term\": \"First Semester\",\r\n    \"years\": \"Every Year\",\r\n    \"cred\": 1,\r\n    \"csyllabus\": \"path/to/syllabus.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{classes}}",
+							"host": [
+								"{{classes}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE a class",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cname\": \"INSO\",\r\n    \"ccode\": \"4052\",\r\n    \"term\": \"First Semester\",\r\n    \"cred\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{classes}}/39",
+							"host": [
+								"{{classes}}"
+							],
+							"path": [
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Invalid Class",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cname\": \"CIIC\",\r\n    \"ccode\": \"4055\",\r\n    \"term\": \"First Semester\",\r\n    \"cred\": -1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{classes}}/37",
+							"host": [
+								"{{classes}}"
+							],
+							"path": [
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE class",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{classes}}/2",
+							"host": [
+								"{{classes}}"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "meetings",
+			"item": [
+				{
+					"name": "GET Meetings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{meeting}}",
+							"host": [
+								"{{meeting}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Meetings By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{meeting}}/20",
+							"host": [
+								"{{meeting}}"
+							],
+							"path": [
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST a new Meeting",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccode\": \"34\",\r\n    \"starttime\": \"7:30\",\r\n    \"endtime\": \"8:20\",\r\n    \"cdays\": \"MJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meeting}}",
+							"host": [
+								"{{meeting}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Invalid Meeting",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccode\": \"34\",\r\n    \"starttime\": \"10:50\",\r\n    \"endtime\": \"7:30\",\r\n    \"cdays\": \"MJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meeting}}",
+							"host": [
+								"{{meeting}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE meeting",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccode\": \"34\",\r\n    \"cdays\": \"MJ\",\r\n    \"starttime\": \"8:30\",\r\n    \"endtime\": \"9:20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meeting}}/21",
+							"host": [
+								"{{meeting}}"
+							],
+							"path": [
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE invalid meeting",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccode\": \"34\",\r\n    \"cdays\": \"MJ\",\r\n    \"starttime\": \"10:30\",\r\n    \"endtime\": \"11:45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{meeting}}/20",
+							"host": [
+								"{{meeting}}"
+							],
+							"path": [
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Meeting",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{meeting}}/21",
+							"host": [
+								"{{meeting}}"
+							],
+							"path": [
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sections",
+			"item": [
+				{
+					"name": "GET all sections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{section}}",
+							"host": [
+								"{{section}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET section by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{section}}/1314",
+							"host": [
+								"{{section}}"
+							],
+							"path": [
+								"1314"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\": 1,\r\n    \"cid\": 3,\r\n    \"mid\": 21,\r\n    \"semester\": \"Fall\",\r\n    \"years\": \"2024\",\r\n    \"capacity\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{section}}",
+							"host": [
+								"{{section}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Invalid section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\": 1,\r\n    // 1, 26\r\n    \"cid\": 3,\r\n    // 3, 40\r\n    \"mid\": 2,\r\n    // 2, 23\r\n    \"semester\": \"Spring\",\r\n    \"years\": \"2025\",\r\n    \"capacity\": -1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{section}}",
+							"host": [
+								"{{section}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE a section",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\": 1,\r\n    \"cid\": 3,\r\n    \"mid\": 2,\r\n    \"semester\": \"Spring\",\r\n    \"years\": \"2025\",\r\n    \"capacity\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{section}}/1315",
+							"host": [
+								"{{section}}"
+							],
+							"path": [
+								"1315"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE an Invalid section",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomid\": 1,\r\n    \"cid\": 3,\r\n    \"mid\": 2,\r\n    \"semester\": \"Spring\",\r\n    \"years\": \"20\",\r\n    \"capacity\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{section}}/1315",
+							"host": [
+								"{{section}}"
+							],
+							"path": [
+								"1315"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE section",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{section}}/1316",
+							"host": [
+								"{{section}}"
+							],
+							"path": [
+								"1316"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "GET all rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{room}}",
+							"host": [
+								"{{room}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET room by its id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{room}}/25",
+							"host": [
+								"{{room}}"
+							],
+							"path": [
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST add a room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"building\": \"Stefani\",\n  \"room_number\": \"120\",\n  \"capacity\": 50\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{room}}",
+							"host": [
+								"{{room}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST add invalid room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"building\": \"Stefani\",\n  \"room_number\": \"119\",\n  \"capacity\": -1\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{room}}",
+							"host": [
+								"{{room}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT update a room",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"building\": \"Stefani\",\n  \"room_number\": \"299\",\n  \"capacity\": 35\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{room}}/26",
+							"host": [
+								"{{room}}"
+							],
+							"path": [
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT update invalid room",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"building\": \"Monzon\",\n    \"room_number\": \"207\",\n    \"capacity\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{room}}/26",
+							"host": [
+								"{{room}}"
+							],
+							"path": [
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{room}}/26",
+							"host": [
+								"{{room}}"
+							],
+							"path": [
+								"26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "requisites",
+			"item": [
+				{
+					"name": "GET all requisites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{requisite}}",
+							"host": [
+								"{{requisite}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET requisite by id's",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{requisite}}/3/2",
+							"host": [
+								"{{requisite}}"
+							],
+							"path": [
+								"3",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new requisite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classid\": 38,\r\n    \"prereq\": false,\r\n    \"reqid\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{requisite}}",
+							"host": [
+								"{{requisite}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST invalid requisite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classid\": 3,\r\n    \"prereq\": true,\r\n    \"reqid\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{requisite}}",
+							"host": [
+								"{{requisite}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE requisite",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{requisite}}/3/15",
+							"host": [
+								"{{requisite}}"
+							],
+							"path": [
+								"3",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "statistics",
+			"item": [
+				{
+					"name": "GET section by day-of-week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stats}}/sections-by-day?semester=Spring&year=2024",
+							"host": [
+								"{{stats}}"
+							],
+							"path": [
+								"sections-by-day"
+							],
+							"query": [
+								{
+									"key": "semester",
+									"value": "Spring"
+								},
+								{
+									"key": "year",
+									"value": "2024"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET top-departments-by-sections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stats/top-departments-by-sections?year=2022&semester=Fall&limit=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"top-departments-by-sections"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2022"
+								},
+								{
+									"key": "semester",
+									"value": "Fall"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET top-rooms-by-utilization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stats}}/top-rooms-by-utilization?year=2024&semester=Spring&limit=1",
+							"host": [
+								"{{stats}}"
+							],
+							"path": [
+								"top-rooms-by-utilization"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "semester",
+									"value": "Spring"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET multi-room-classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stats}}/multi-room-classes?year=2024&semester=Spring",
+							"host": [
+								"{{stats}}"
+							],
+							"path": [
+								"multi-room-classes"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "semester",
+									"value": "Spring"
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Longest AVG meeting duration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stats}}/top-classes-by-avg-duration?year=2024&semester=Fall",
+							"host": [
+								"{{stats}}"
+							],
+							"path": [
+								"top-classes-by-avg-duration"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "semester",
+									"value": "Fall"
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET classes without prerequisites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stats}}/classes-without-prereqs",
+							"host": [
+								"{{stats}}"
+							],
+							"path": [
+								"classes-without-prereqs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "syllabus",
+			"item": [
+				{
+					"name": "Post a Chunk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"courseid\": 4,\n  \"chunk\": \"This course introduces database systems and SQL.\",\n  \"embedding_text\": \"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{syllabus}}",
+							"host": [
+								"{{syllabus}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get chunk by course id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{syllabus}}",
+							"host": [
+								"{{syllabus}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search similar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"embedding_text\": [\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n  ],\n  \"limit\": 5\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{syllabus}}/search",
+							"host": [
+								"{{syllabus}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search similarby id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"embedding\": [\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,\n    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n  ],\n  \"limit\": 5\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{syllabus}}/course/4/search",
+							"host": [
+								"{{syllabus}}"
+							],
+							"path": [
+								"course",
+								"4",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete chunk",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{syllabus}}/course/4",
+							"host": [
+								"{{syllabus}}"
+							],
+							"path": [
+								"course",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "GET all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}",
+							"host": [
+								"{{user}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET user by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/1",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET user by username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/Schutz",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"Schutz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"john_doe\",\r\n  \"password\": \"mySecretPassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}",
+							"host": [
+								"{{user}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Schutz\",\r\n  \"password\": \"Wh@t1sTh3D0m@1n\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/login",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE a user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Schutz\",\r\n  \"password\": \"Wh@t1sTh3D0m@1n\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/2",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/3",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chatbot",
+			"item": [
+				{
+					"name": "Chatbot_talk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"How many credits does the course CIIC4030 has?\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chatbot}}",
+							"host": [
+								"{{chatbot}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "classes",
+			"value": "{{url}}/classes"
+		},
+		{
+			"key": "meeting",
+			"value": "{{url}}/meeting"
+		},
+		{
+			"key": "section",
+			"value": "{{url}}/section"
+		},
+		{
+			"key": "room",
+			"value": "{{url}}/room"
+		},
+		{
+			"key": "requisite",
+			"value": "{{url}}/requisite"
+		},
+		{
+			"key": "stats",
+			"value": "{{url}}/stats"
+		},
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:5000/lacy/api"
+		},
+		{
+			"key": "user",
+			"value": "{{url}}/user"
+		},
+		{
+			"key": "chatbot",
+			"value": "{{url}}/chatbot"
+		},
+		{
+			"key": "syllabus",
+			"value": "{{url}}/syllabus"
+		}
+	]
+}
