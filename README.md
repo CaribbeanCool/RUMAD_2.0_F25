@@ -21,11 +21,7 @@ This project is a web application built using Flask that connects to a PostgreSQ
    ```bash
    uv add -r requirements.txt
    ```
-4. Set up the PostgreSQL database using Docker:
-   ```bash
-   docker-compose up -d
-   ```
-5. Configure the database connection in `.env` file:
+4. Configure the database connection in `.env` file:
    ```
    DB_HOST=localhost
    DB_PORT=5432
@@ -33,17 +29,25 @@ This project is a web application built using Flask that connects to a PostgreSQ
    DB_USER=your_username
    DB_PASSWORD=your_password
    ```
-6. Run the Flask API application:
+5. Run the Flask API application:
    ```bash
    python API/main.py
    ```
-7. To run the Chatbot application, navigate to the Chatbot directory and start the Flask app:
+6. To run the Chatbot application, navigate to the Chatbot directory and start the Flask app:
    ```bash
    streamlit run Chatbot/main.py
    ```
 
 ## Usage
 
-1. Open your web browser and navigate to `http://localhost:5000`.
-2. Use the web interface to interact with the PostgreSQL database.
-3. Follow the on-screen instructions to perform various database operations.
+<!-- Talk about using streamlit's chatbot and the different tabs to view stats -->
+
+To use the Chatbot application, run the UI, open your web browser and navigate to `http://localhost:8501`. You will see the Chatbot interface where you can interact with the system. The application provides various tabs to view statistics and other relevant information about the database.
+
+### Chatbot Interaction
+
+In the Chatbot tab, you can type your queries related to the syllabuses of various CIIC and INSO classes, and the chatbot will respond based on the data available in the PostgreSQL database via RAG.
+
+### Statistics Tabs
+
+The Statistics tabs provide insights and visualizations based on the data stored in the database. You can explore different metrics and trends and customize parameters as needed.
